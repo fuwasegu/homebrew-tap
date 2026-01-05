@@ -1,0 +1,51 @@
+name: Update Cask
+
+on:
+  repository_dispatch:
+    types: [update-cask]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update Cask
+        run: |
+          VERSION="${{ github.event.client_payload.version }}"
+          SHA256="${{ github.event.client_payload.sha256 }}"
+
+          cat > Casks/md-sh.rb << EOF
+          cask "md-sh" do
+            version "${VERSION}"
+            sha256 "${SHA256}"
+
+            url "https://github.com/fuwasegu/md.sh/releases/download/v#{version}/md.sh-#{version}.zip"
+            name "md.sh"
+            desc "Lightweight native Markdown dashboard for macOS"
+            homepage "https://github.com/fuwasegu/md.sh"
+
+            depends_on macos: ">= :sonoma"
+
+            app "md.sh.app"
+
+            postflight do
+              system_command "/usr/bin/xattr",
+                             args: ["-cr", "#{appdir}/md.sh.app"],
+                             sudo: false
+              system_command "/usr/bin/SetFile",
+                             args: ["-a", "E", "#{appdir}/md.sh.app"],
+                             sudo: false
+            end
+          end
+          EOF
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Casks/md-sh.rb
+          git commit -m "Bump md-sh to v${{ github.event.client_payload.version }}"
+          git push
