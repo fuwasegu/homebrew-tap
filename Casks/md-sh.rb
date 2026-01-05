@@ -1,6 +1,6 @@
 cask "md-sh" do
-  version "0.1.4"
-  sha256 "fbab2dbd217a3c5073ef55073477fe0cc6df4bce55a8683761c81c99a40b2c17"
+  version "0.1.5"
+  sha256 "f56bcc7823b25c73c7384cc85c5953ce40ab2ac226aa867a72899e4c0d19e0fc"
 
   url "https://github.com/fuwasegu/md.sh/releases/download/v#{version}/md.sh-#{version}.zip"
   name "md.sh"
