@@ -1,6 +1,6 @@
 cask "md-sh" do
-  version "0.1.2"
-  sha256 "9897f2b274151888fd6bd0dba4071f00a42f190f9f3e7d77ae6fb1337d74652f"
+  version "0.1.4"
+  sha256 "fbab2dbd217a3c5073ef55073477fe0cc6df4bce55a8683761c81c99a40b2c17"
 
   url "https://github.com/fuwasegu/md.sh/releases/download/v#{version}/md.sh-#{version}.zip"
   name "md.sh"
@@ -15,7 +15,6 @@ cask "md-sh" do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/md.sh.app"],
                    sudo: false
-    # Hide .app extension in Finder
     system_command "/usr/bin/SetFile",
                    args: ["-a", "E", "#{appdir}/md.sh.app"],
                    sudo: false
