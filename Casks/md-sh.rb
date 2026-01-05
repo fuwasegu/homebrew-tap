@@ -15,5 +15,9 @@ cask "md-sh" do
     system_command "/usr/bin/xattr",
                    args: ["-cr", "#{appdir}/md.sh.app"],
                    sudo: false
+    # Hide .app extension in Finder
+    system_command "/usr/bin/SetFile",
+                   args: ["-a", "E", "#{appdir}/md.sh.app"],
+                   sudo: false
   end
 end
