@@ -1,6 +1,6 @@
 cask "airlingua" do
-  version "1.9.12"
-  sha256 "e6f7414ebddb211c10d5517df5162a06170d105c8b0497aa92c9d6d2b507b9fb"
+  version "1.9.13"
+  sha256 "4c923cefa02ffeb6759dec2789217e4827c86c2630d4df684d41d2360adbc102"
 
   url "https://github.com/fuwasegu/AirLingua/releases/download/v#{version}/AirLingua-#{version}.zip"
   name "AirLingua"
