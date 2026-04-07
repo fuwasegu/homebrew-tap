@@ -18,6 +18,9 @@ cask "airlingua" do
     system_command "/usr/bin/SetFile",
                    args: ["-a", "E", "#{appdir}/AirLingua.app"],
                    sudo: false
+    system_command "/usr/bin/open",
+                   args: ["#{appdir}/AirLingua.app"],
+                   sudo: false
   end
 
   zap trash: [
