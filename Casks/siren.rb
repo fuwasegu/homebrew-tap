@@ -1,6 +1,6 @@
 cask "siren" do
-  version "0.1.0"
-  sha256 "0cff9ad682e5094f4bb422b82cabb305fb5e00ba52a38661fd01d81f7a0f74d4"
+  version "0.2.0"
+  sha256 "8560d9ae7312470350d435ce1965b3b7bbb65aa49fab326a55f509f4e8d7b3e8"
 
   url "https://github.com/fuwasegu/siren/releases/download/v#{version}/Siren-#{version}.zip"
   name "Siren"
