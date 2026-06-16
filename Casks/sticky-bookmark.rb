@@ -1,11 +1,11 @@
 cask "sticky-bookmark" do
-  version "0.1.0"
-  sha256 "PLACEHOLDER"
+  version "1.0.0"
+  sha256 "fd08f90bf940652e9f11d4a565a5bbd334e57f63f5414d466ce256298f17282a"
 
-  url "https://github.com/fuwasegu/sticky-bookmark/releases/download/v#{version}/StickyBookmark-#{version}.zip"
+  url "https://github.com/fuwasegu/stickey-bookmark/releases/download/v#{version}/StickyBookmark-#{version}.zip"
   name "Sticky Bookmark"
   desc "Pin web bookmarks as freely-placed sticky notes on your macOS desktop"
-  homepage "https://github.com/fuwasegu/sticky-bookmark"
+  homepage "https://github.com/fuwasegu/stickey-bookmark"
 
   depends_on macos: ">= :ventura"
 
