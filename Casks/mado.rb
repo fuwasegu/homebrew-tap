@@ -1,6 +1,6 @@
 cask "mado" do
-  version "1.0.0"
-  sha256 "06b2b89007c8793ab5f51f44ff1fb51342fe1fd007253f7cc9956e030924e318"
+  version "1.0.1"
+  sha256 "165441916feda0a90cf701e40ba9a2913aa1eb6d3dd7bded53a6f688c64f06b2"
 
   url "https://github.com/fuwasegu/mado/releases/download/v#{version}/Mado-#{version}.zip"
   name "Mado"
