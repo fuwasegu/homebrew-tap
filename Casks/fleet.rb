@@ -20,5 +20,5 @@ cask "fleet" do
                    must_succeed: false
   end
 
-  zap trash: "~/Library/Preferences/dev.hirosugu.Fleet.plist"
+  zap trash: "~/Library/Preferences/dev.fuwasegu.Fleet.plist"
 end
