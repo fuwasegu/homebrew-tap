@@ -1,6 +1,6 @@
 cask "fleet" do
-  version "0.11.1"
-  sha256 "c01dde80bb6f82220de12604851a5757a828b2d04439809bdc6ba8ab723d4995"
+  version "0.11.2"
+  sha256 "667f7df5b1092bca000ccdfe40ec62769ad1405c9412fc1a9d9b31627d9360bc"
 
   url "https://github.com/fuwasegu/fleet/releases/download/v#{version}/Fleet.app.zip"
   name "Fleet"
