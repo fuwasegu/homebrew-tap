@@ -1,10 +1,10 @@
 cask "og" do
-  version "0.1.0"
-  sha256 "775f40fe6be7e624527a2e1fa9e4c55ea02ed39c3279c124c692035a9e8b61a4"
+  version "0.2.0"
+  sha256 "3fc4cf9dd6b271cbb783f4e9edd90b7258868d1f78964c939d79869eb61b009d"
 
   url "https://github.com/fuwasegu/og/releases/download/v#{version}/og.app.zip"
   name "og"
-  desc "120fps native macOS Go editor with CoreText, Tree-sitter, and PTY terminal"
+  desc "Native macOS IDE for writing Go by hand, GoLand-style"
   homepage "https://github.com/fuwasegu/og"
 
   depends_on macos: ">= :sonoma"
