@@ -13,11 +13,8 @@ cask "fleet" do
 
   # 未署名ビルドの Gatekeeper 回避。quarantine のみ剥がす。
   # (企業DLP等が付ける保護 xattr を巻き込むと EPERM で失敗するため -cr は使わない)
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args:         ["-dr", "com.apple.quarantine", "#{appdir}/Fleet.app"],
-                   sudo:         false,
-                   must_succeed: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Fleet.app"], must_succeed: false
   end
 
   zap trash: "~/Library/Preferences/dev.fuwasegu.Fleet.plist"
