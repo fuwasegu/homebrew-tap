@@ -7,7 +7,7 @@ cask "mado" do
   desc "Fast, beautiful Markdown viewer for macOS with Mermaid and OpenAPI support"
   homepage "https://github.com/fuwasegu/mado"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "Mado.app"
 
