@@ -11,16 +11,10 @@ cask "airlingua" do
 
   app "AirLingua.app"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/AirLingua.app"],
-                   sudo: false
-    system_command "/usr/bin/SetFile",
-                   args: ["-a", "E", "#{appdir}/AirLingua.app"],
-                   sudo: false
-    system_command "/usr/bin/open",
-                   args: ["#{appdir}/AirLingua.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-cr", "{{appdir}}/AirLingua.app"]
+    run "/usr/bin/SetFile", args: ["-a", "E", "{{appdir}}/AirLingua.app"]
+    run "/usr/bin/open", args: ["{{appdir}}/AirLingua.app"]
   end
 
   zap trash: [
