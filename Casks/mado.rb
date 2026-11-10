@@ -11,11 +11,9 @@ cask "mado" do
 
   app "Mado.app"
 
-  postflight do
+  postflight_steps do
     # -cr は SIP 保護の com.apple.provenance で失敗するため quarantine のみ削除
-    system_command "/bin/sh",
-                   args: ["-c", "/usr/bin/xattr -dr com.apple.quarantine '#{appdir}/Mado.app' || true"],
-                   sudo: false
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Mado.app"], must_succeed: false
   end
 
   zap trash: [
