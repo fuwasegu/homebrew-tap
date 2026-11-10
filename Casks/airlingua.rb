@@ -7,7 +7,7 @@ cask "airlingua" do
   desc "Local LLM translation app for macOS"
   homepage "https://github.com/fuwasegu/AirLingua"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AirLingua.app"
 
