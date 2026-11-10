@@ -7,7 +7,7 @@ cask "og" do
   desc "Native macOS IDE for writing Go by hand, GoLand-style"
   homepage "https://github.com/fuwasegu/og"
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "og.app"
 
