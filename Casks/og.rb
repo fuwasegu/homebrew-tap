@@ -1,6 +1,6 @@
 cask "og" do
-  version "0.2.1"
-  sha256 "543aaff47839a577b4ee7d1fa3dabd40024bab965e9731de040361b1f139b7c6"
+  version "0.2.2"
+  sha256 "a47d988cc29daa6f6eaffa3141f8bd5267342e06fcc4578a1a918731ef5789d1"
 
   url "https://github.com/fuwasegu/og/releases/download/v#{version}/og.app.zip"
   name "og"
